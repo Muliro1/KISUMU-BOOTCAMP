@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <title>MY DIARY</title>
+    </head>
+<body>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+    <form name = "signup"  method = "post" >
+	    <div id = "userinfo">
+		    <p>Firstname: </p><input type = "text", name = "firstname"required size = "40">
+		    <p>Lastname:</p> <input type = "text", name = "lastname"required size = "40">
+		    <p>Username: </p><input type = "text", name = "username"required size = "40">
+		    <p>Email:</p> <input type = "email", name = "username"required size = "40">
+		    <p>Password: </p><input type = "password", name = "username"required size = "40">
+		    <a href = 'login.html' >
+		   <input type = "submit" id = "input" size = "80" onsubmit = "congrats()" class = 'button'>
+		    </a>
+	    </div>
+    </form>
+	<hr>
+	<small>
+         <p id = "conditions">By creating an account you agree to our 
+     	    <a href="#">
+     	        Terms & Privacy
+             </a>
+        <p>Already have an account? login <a href = 'login.html'> here </a></p>
+    </small>
+</body>
+</html>
