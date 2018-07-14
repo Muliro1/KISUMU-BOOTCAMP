@@ -14,7 +14,7 @@
 		<li><a href="#">Contact</a></li>
 		<li><a href="#">About</a></li>
 	</ul>
-	<form action = "post", id = "usrinpt">
+	<form action = "?" id = "input" method = 'post' name = 'input' onsubmit="return MyFunction();">
 	    <fieldset>
 			<legend> Personal Information </legend>
 	        <div id = "field">
@@ -26,12 +26,20 @@
 		 	        Password:
 		        </p>
 		        <input type = "password" name = "password" required>
-		        <button class="button">Log in</button>
+		        <button class="button" onclick = 'return MyFunction()'>Log in</button>
 	        </div>
 	    </fieldset>
     </form>
-    <p>
-		don't have an account? sign up <a href = "register.html"> here. </a>
+    <p class = 'bottom'>
+		<small>
+		    don't have an account? sign up <a href = "register.html"> here. </a>
+	    </small>
 	</p>
+    <script type = 'text/javascript'>
+		function MyFunction(){
+			alert('You are now logged in as ' + document.forms['input']['usrname'].value);
+		}
+	</script>
+
 </body>
 </html>

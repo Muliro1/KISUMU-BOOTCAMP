@@ -40,7 +40,7 @@ p{
 	text-align:center;
 	
 }
-#usrinpt{
+#input{
 	margin-bottom:30px;
 }
 
@@ -73,6 +73,11 @@ li a {
     text-align: center;
     padding: 14px 16px;
 	text-decoration: none;
+	font-family:verdana, Geneva, Tahoma, sans-serif;
+	letter-spacing:5px;
+}
+
+.bottom{
 	font-family:verdana, Geneva, Tahoma, sans-serif;
 	letter-spacing:5px;
 }
