@@ -13,6 +13,8 @@
 		<li><a href="#">About</a></li>
 	</ul>
     <form name = "signup"  action = "?" method = 'post'>
+    	<fieldset>
+    		<legend>fill in the form to register</legend>
 	    <div id = "userinfo">
 		    <p>Firstname: </p><input type = "text", name = "firstname" required size = "40">
 		    <p>Lastname:</p> <input type = "text", name = "lastname" required size = "40">
@@ -23,6 +25,7 @@
 				<button class="button" onclick = 'return MyFunction()'>Register</button>
 		    </a>
 	    </div>
+	    </fieldset>
     </form>
 	<hr>
 	<small>
@@ -34,7 +37,33 @@
 	</small>
 	<script type = 'text/javascript'>
 		function MyFunction(){
-			alert('Congratulations!! You have created an account as ' + document.forms['signup']['username'].value);
+			 if(document.forms['signup']['firstname'].value == ''){
+			 	alert('please provide a firstname!');
+			 	document.forms['signup']['firstname'].focus();
+			 	return false;
+			 }
+			 if(document.forms['signup']['lastname'].value == ''){
+			 	alert('Please provide lastname');
+			 	document.forms['signup']['lastname'].focus();
+			 	return false;
+			 }
+			  if(document.forms['signup']['username'].value == ''){
+			 	alert('please provide a username!');
+			 	document.forms['signup']['username'].focus();
+			 	return false;
+			 }
+			 if(document.forms['signup']['email'].value == ''){
+			 	alert('Please provide email');
+			 	document.forms['signup']['email'].focus();
+			 	return false;
+			 }
+			 if(document.forms['signup']['password'].value == ''){
+			 	alert('please provide a password!');
+			 	document.forms['signup']['password'].focus();
+			 	return false;
+			 }
+			 alert('You have successfully created an account')
+			 return true;
 		}
 	</script>
 </body>

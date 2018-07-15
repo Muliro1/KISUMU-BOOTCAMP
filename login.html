@@ -16,7 +16,7 @@
 	</ul>
 	<form action = "?" id = "input" method = 'post' name = 'input' onsubmit="return MyFunction();">
 	    <fieldset>
-			<legend> Personal Information </legend>
+			<legend> Log In </legend>
 	        <div id = "field">
 		        <p>
 		 	        Username:
@@ -37,8 +37,22 @@
 	</p>
     <script type = 'text/javascript'>
 		function MyFunction(){
-			alert('You are now logged in as ' + document.forms['input']['usrname'].value);
-		}
+			 if(document.forms['input']['usrname'].value == ''){
+			 	alert('please provide a username!');
+			 	document.forms['input']['usrname'].focus();
+			 	return false
+			 }
+			 if(document.forms['input']['password'].value == ''){
+			 	alert('Please provide password');
+			 	document.forms['input']['password'].focus();
+			 	return false
+			 }
+			 if(document.forms['input']['usrname'].value != '' && document.forms['input']['password'].value != ''){
+			 	alert('You are logged in as ' + document.forms['input']['usrname'].value) 
+			 	return false
+			 }
+			 return true;
+			}
 	</script>
 
 </body>
